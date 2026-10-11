@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101c">
+  <title>Contact — A little bit of magic</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #10101c; color: #f7f4ff; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 6rem 1.25rem 2rem; background: radial-gradient(ellipse at 16% 18%, #6d4bff35, transparent 36%), radial-gradient(ellipse at 84% 78%, #13d9c629, transparent 34%), #10101c; }
+    nav { position: fixed; z-index: 2; top: 1.25rem; left: 50%; display: flex; gap: .35rem; transform: translateX(-50%); padding: .4rem; border: 1px solid #ffffff1b; border-radius: 999px; background: #171625c9; backdrop-filter: blur(16px); }
+    nav a { padding: .65rem 1rem; border-radius: 999px; color: #c9c4d8; text-decoration: none; font-size: .88rem; transition: background .2s, color .2s; }
+    nav a:hover, nav a:focus-visible { color: #fff; background: #ffffff14; outline: none; }
+    main { width: min(680px, 100%); padding: clamp(2rem, 7vw, 4.5rem); border: 1px solid #ffffff1b; border-radius: 32px; background: linear-gradient(145deg, #ffffff0d, #ffffff04); box-shadow: 0 30px 100px #0007, inset 0 1px #ffffff12; backdrop-filter: blur(20px); animation: rise .8s ease both; }
+    .eyebrow { margin: 0 0 .85rem; color: #a9a3be; font-size: .75rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(3rem, 9vw, 5.5rem); line-height: 1; letter-spacing: -.075em; font-weight: 800; }
+    h1 span { display: block; padding: .08em 0 .16em; background: linear-gradient(100deg, #c4b5fd 8%, #f0abfc 48%, #5eead4 92%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .intro { margin: 1.3rem 0 2rem; color: #b9b5c8; font-size: 1.08rem; line-height: 1.8; }
+    .contact-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.35rem; border: 1px solid #ffffff17; border-radius: 18px; background: #ffffff08; }
+    .contact-card small { display: block; margin-bottom: .35rem; color: #8f8a9f; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-card a { color: #d8c9ff; font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-card a:hover, .contact-card a:focus-visible { color: #fff; text-decoration: underline; }
+    .note { margin: 1.2rem 0 0; color: #8f8a9f; font-size: .88rem; line-height: 1.65; }
+    footer { margin-top: 2rem; color: #777388; font-size: .78rem; }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 600px) { nav { top: .8rem; } nav a { padding: .6rem .85rem; } .contact-card { align-items: flex-start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <main>
+    <p class="eyebrow">Let’s start a conversation</p>
+    <h1>Say <span>hello.</span></h1>
+    <p class="intro">Have a question, an idea, or just want to say hi? I’d love to hear from you.</p>
+    <div class="contact-card">
+      <div><small>Email</small><a href="mailto:hello@example.com">hello@example.com</a></div>
+      <span aria-hidden="true">↗</span>
+    </div>
+    <p class="note">Replace this sample address with your own email to make the contact link yours.</p>
+    <footer>Good things often begin with a message. ✨</footer>
+  </main>
+</body>
+</html>
